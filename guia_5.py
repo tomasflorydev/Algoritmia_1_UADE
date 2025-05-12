@@ -91,3 +91,67 @@ fecha_en_texto(fecha)
 
 
 pedir_correo() """
+
+#Ejercicio 5
+""" import random
+def generarFichas():
+    #lado1 = random.randint(1,6)
+    #lado2 = random.randint(1,6)
+    lado1 = 1
+    lado2 = 2
+    
+    ficha1 = (lado1,lado2)
+
+    #lado4 = random.randint(1,6)
+    #lado3 = random.randint(1,6)
+    lado3 = 3
+    lado4 = 4
+
+    ficha2 = (lado3, lado4)
+
+    return ficha1, ficha2
+
+def conversion_tuplas_a_conjuntos(ficha1,ficha2):
+    conjunto = set(ficha1)
+    conjunto2 = set(ficha2)
+    return conjunto, conjunto2
+
+def verificar_encaje(conjunto, conjunto2):
+    union_conjunto = conjunto | conjunto2
+    if len(union_conjunto) < 4:
+        print("Las fichas encastran")
+    else:
+        print("Las fichas no encastran") 
+
+ficha1, ficha2= generarFichas()
+conjunto, conjunto2 = conversion_tuplas_a_conjuntos(ficha1,ficha2)
+verificar_encaje(conjunto, conjunto2)
+print(ficha1,ficha2) """
+
+#Ejercicio 6
+""" import random
+def generar_vectores():
+    #ejeX_1 = random.randint(-10,10)
+    #ejeY_1 = random.randint(-10,10)
+    ejeX_1 = 2
+    ejeY_1 = 3
+    vector1 = (ejeX_1,ejeY_1)
+
+    #ejeX_2 = random.randint(-10,10)
+    #ejeY_2 = random.randint(-10,10)
+    ejeX_2 = -3
+    ejeY_2 = 2    
+    vector2 = (ejeX_2, ejeY_2)
+
+    return vector1,vector2
+
+def verficar_ortogonales(vector1,vector2):
+    if vector1[0] * vector2[0] + vector1[1] * vector2[1] == 0:
+        print("Son ortogonales")
+        return True
+    else:
+        print("No son ortogonales")
+        return False
+
+vector1, vector2 = generar_vectores()
+verficar_ortogonales(vector1,vector2) """
